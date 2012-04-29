@@ -102,11 +102,11 @@ public class Song {
 		this.size = size;
 	}
 
-	public int getBpm() {
+	public int getBPM() {
 		return bpm;
 	}
 
-	public void setBpm(int bpm) {
+	public void setBPM(int bpm) {
 		this.bpm = bpm;
 	}
 
@@ -134,17 +134,51 @@ public class Song {
 				+ ", retriever=" + retriever + "]";
 	}
 
-	//Create comparators for different things-->metaprogram this?
 	//Also, create check for accuracy
-	public static Comparator<Song> comparatorByBitRate(){
+	public static Comparator<Song> comparatorByBitrate(){
 		return new 
 				Comparator<Song>(){
 					public int compare(Song song1, Song song2){
-						return song1.getBitrate().compareTo(song2.getBitrate());
-					}
+						Integer bit1 = (Integer)song1.getBitrate();
+						Integer bit2 = (Integer)song2.getBitrate();
+						return bit1.compareTo(bit2);
+						}
 				};
 	}
-
+	
+	public static Comparator<Song> comparatorByDuration(){
+		return new 
+				Comparator<Song>(){
+					public int compare(Song song1, Song song2){
+						Integer dur1 = (Integer)song1.getDuration();
+						Integer dur2 = (Integer)song2.getDuration();
+						return dur1.compareTo(dur2);
+						}
+				};
+	}
+	
+	public static Comparator<Song> comparatorBySize(){
+		return new 
+				Comparator<Song>(){
+					public int compare(Song song1, Song song2){
+						Double size1 = (Double)song1.getSize();
+						Double size2 = (Double)song2.getSize();
+						return size1.compareTo(size2);
+						}
+				};
+	}
+	
+	public static Comparator<Song> comparatorByBPM(){
+		return new 
+				Comparator<Song>(){
+					public int compare(Song song1, Song song2){
+						Integer BPM1 = (Integer)song1.getBPM();
+						Integer BPM2 = (Integer)song2.getBPM();
+						return BPM1.compareTo(BPM2);
+						}
+				};
+	}
+	
 	public static Comparator<Song> comparatorByTitle(){
 		return new 
 				Comparator<Song>(){
@@ -153,4 +187,22 @@ public class Song {
 					}
 				};
 	} 
+	
+	public static Comparator<Song> comparatorByArtist(){
+		return new 
+				Comparator<Song>(){
+					public int compare(Song song1, Song song2){
+						return song1.getArtist().compareTo(song2.getArtist());
+					}
+				};
+	}
+	
+	public static Comparator<Song> comparatorByAlbum(){
+		return new 
+				Comparator<Song>(){
+					public int compare(Song song1, Song song2){
+						return song1.getAlbum().compareTo(song2.getAlbum());
+					}
+				};
+	}
 }

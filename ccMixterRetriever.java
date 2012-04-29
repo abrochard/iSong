@@ -107,7 +107,7 @@ public class ccMixterRetriever implements SongRetriever {
 			p = Pattern.compile("\"bpm\" : (\\d+),");
 			m = p.matcher(rawSongs[i]);
 			if(m.find())
-				s.setBpm(Integer.parseInt(m.group(1)));
+				s.setBPM(Integer.parseInt(m.group(1)));
 			//find the download link
 			p = Pattern.compile("\"download_url\" : \"((.*).mp3)\", \"file_rawsize\"");
 			m = p.matcher(rawSongs[i]);
