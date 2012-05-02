@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
  * @author Adrien
  *
  */
-public class mp3SkullRetriever implements SongRetriever {
+public class Mp3SkullRetriever implements SongRetriever {
 	
 	public static String SOURCE="mp3skull.com";
 	public static String BASE="http://mp3skull.com/mp3/";

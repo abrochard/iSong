@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
  * @author Adrien
  *
  */
-public class amazonRetriever implements SongRetriever {
+public class AmazonRetriever implements SongRetriever {
 	
 	public static String SOURCE="amazon.com";
 	public static String BASE="http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Ddigital-music&field-keywords=";
@@ -39,7 +39,6 @@ public class amazonRetriever implements SongRetriever {
 	private String getResultPage(String query) {
 		String content = "";
 		try {
-			//get the result page
 			URL url = new URL(BASE+query);
 			URLConnection connection = url.openConnection();
 			HttpURLConnection httpConnection = (HttpURLConnection) connection;
@@ -61,27 +60,19 @@ public class amazonRetriever implements SongRetriever {
 	private ArrayList<Song> parseContent(String content, ArrayList<Song> results) {
 		//splits at every song found
 		String[] rawSongs = content.split("<td class=\"titleColOdd\"><table border=\"0\"");
-		//rawSongs[0] is just some html code
 		for(int i=1; i<rawSongs.length; i++) {
 			Song s = new Song();
 			//find the source, title, artist, album and duration
 			Pattern p = Pattern.compile("<a href=\"(.*)\">(.*)</a></td></tr></table></td><td class=\"titleColOdd\"><a href=\"(.*)\">(.*)</a></td><td class=\"titleColOdd\"><a href=\"(.*)\">(.*)</a></td><td class=\"priceColOdd\">(\\d+):(\\d+)</td>");
 			Matcher m = p.matcher(rawSongs[i]);
 			if(m.find()) {
-				//source
 				s.setSource(m.group(1));
-				//title
 				s.setTitle(m.group(2));
-				//artist
 				s.setArtist(m.group(4));
-				//album
 				s.setAlbum(m.group(6));
-				//duration
 				s.setDuration(Integer.parseInt(m.group(7))*60 + Integer.parseInt(m.group(8)));
 			}
-			//mark the retriever
 			s.setRetriever(SOURCE);
-			//add to the list
 			results.add(s);
 		}
 		return results;

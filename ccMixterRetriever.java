@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
  * @author Adrien
  *
  */
-public class ccMixterRetriever implements SongRetriever {
+public class CcMixterRetriever implements SongRetriever {
 	
 	public static String SOURCE="dig.ccmixter.org";
 	public static String BASE="http://dig.ccmixter.org/dig?dig-query=";
