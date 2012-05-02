@@ -13,12 +13,12 @@ public class Song {
 	private int bitrate; //in kbps
 	private int duration; //in seconds
 	private double size; //in mb
-	private int bpm; //Bit Per Minute
+	private int bpm; //Beat Per Minute
 	private String source; //the website's URL where the song can be found
 	private String retriever; //the retriever or service that found the song
 	
 	/**
-	 * Constructor
+	 * Default constructor
 	 */
 	public Song() {
 		this.title = null;
@@ -126,6 +126,9 @@ public class Song {
 		this.retriever = retriever;
 	}
 
+	/**
+	 * Returns String of song's information
+	 */
 	@Override
 	public String toString() {
 		return "Song [title=" + title + ", artist=" + artist + ", album="
@@ -134,8 +137,10 @@ public class Song {
 				+ ", retriever=" + retriever + "]";
 	}
 
-	//Also, create check for accuracy
-	public static Comparator<Song> comparatorByBitrate(){
+	/**
+	 * Compares songs by Bitrate
+	 * @return song comparator
+	 */	public static Comparator<Song> comparatorByBitrate(){
 		return new 
 				Comparator<Song>(){
 					public int compare(Song song1, Song song2){
@@ -146,6 +151,10 @@ public class Song {
 				};
 	}
 	
+	/**
+	 * Compares songs by Duration
+	 * @return song comparator
+	 */
 	public static Comparator<Song> comparatorByDuration(){
 		return new 
 				Comparator<Song>(){
@@ -168,6 +177,10 @@ public class Song {
 				};
 	}
 	
+	/**
+	 * Compares songs by BPM
+	 * @return song comparator
+	 */
 	public static Comparator<Song> comparatorByBPM(){
 		return new 
 				Comparator<Song>(){
@@ -179,6 +192,10 @@ public class Song {
 				};
 	}
 	
+	/**
+	 * Compares songs by Title
+	 * @return song comparator
+	 */
 	public static Comparator<Song> comparatorByTitle(){
 		return new 
 				Comparator<Song>(){
@@ -188,6 +205,10 @@ public class Song {
 				};
 	} 
 	
+	/**
+	 * Compares songs by Artist
+	 * @return song comparator
+	 */
 	public static Comparator<Song> comparatorByArtist(){
 		return new 
 				Comparator<Song>(){
@@ -197,7 +218,10 @@ public class Song {
 				};
 	}
 	
-	
+	/**
+	 * Compares songs by Album
+	 * @return song comparator
+	 */
 	public static Comparator<Song> comparatorByAlbum(){
 		return new 
 				Comparator<Song>(){

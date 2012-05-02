@@ -57,6 +57,12 @@ public class AmazonRetriever implements SongRetriever {
 		return content;
 	}
 
+	/**
+	 * Parses content of a page
+	 * @param content of page
+	 * @param results arraylist of songs
+	 * @return Arraylist of song results
+	 */
 	private ArrayList<Song> parseContent(String content, ArrayList<Song> results) {
 		//splits at every song found
 		String[] rawSongs = content.split("<td class=\"titleColOdd\"><table border=\"0\"");
@@ -78,6 +84,9 @@ public class AmazonRetriever implements SongRetriever {
 		return results;
 	}
 
+	/**
+	 * Returns source of a retriever
+	 */
 	@Override
 	public String getSource() {
 		return SOURCE;
