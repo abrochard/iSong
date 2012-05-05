@@ -6,7 +6,7 @@ import java.util.ArrayList;
  *
  */
 public interface SongRetriever {
-	
+
 	/**
 	 * This method returns an ArrayList of songs corresponding to the 
 	 * results of the query on the particular website tested 
@@ -17,7 +17,7 @@ public interface SongRetriever {
 	 * @return 
 	 */
 	ArrayList<Song> getResults(String query, ArrayList<Song> results);
-	
+
 	/**
 	 * This method just return the website's URL from which the song are searched
 	 * @return

@@ -112,6 +112,37 @@
     </void> 
    </object> 
   </void> 
+  <void method="addNode"> 
+   <object id="LifelineNode4" class="com.horstmann.violet.ImplicitParameterNode"> 
+    <void property="name"> 
+     <void property="text"> 
+      <string>SongTableModel</string> 
+     </void> 
+    </void> 
+   </object> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>707.0</double> 
+     <double>355.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object id="ActivationBarNode3" class="com.horstmann.violet.CallNode"> 
+    <void method="addChild"> 
+     <object idref="LifelineNode4"/> 
+    </void> 
+    <void property="implicitParameter"> 
+     <object idref="LifelineNode0"/> 
+    </void> 
+   </object> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>101.0</double> 
+     <double>362.0</double> 
+    </void> 
+   </object> 
+  </void> 
   <void method="connect"> 
    <object class="com.horstmann.violet.CallEdge"> 
     <void property="middleLabel"> 
@@ -147,6 +178,15 @@
    </object> 
    <object idref="ActivationBarNode2"/> 
    <object idref="LifelineNode3"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.CallEdge"> 
+    <void property="middleLabel"> 
+     <string>«create»</string> 
+    </void> 
+   </object> 
+   <object idref="ActivationBarNode3"/> 
+   <object idref="LifelineNode4"/> 
   </void> 
  </object> 
 </java> 

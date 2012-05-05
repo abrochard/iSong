@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
  *
  */
 public class AmazonRetriever implements SongRetriever {
-	
+
 	public static String SOURCE="amazon.com";
 	public static String BASE="http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Ddigital-music&field-keywords=";
 

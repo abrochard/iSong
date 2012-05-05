@@ -3,16 +3,6 @@
  <object class="com.horstmann.violet.ClassDiagramGraph"> 
   <void method="addNode"> 
    <object id="InterfaceNode0" class="com.horstmann.violet.InterfaceNode"> 
-    <void property="bounds"> 
-     <object class="java.awt.geom.Rectangle2D$Double"> 
-      <void method="setRect"> 
-       <double>420.0</double> 
-       <double>40.0</double> 
-       <double>120.0</double> 
-       <double>80.0</double> 
-      </void> 
-     </object> 
-    </void> 
     <void property="methods"> 
      <void property="text"> 
       <string>getResults()
@@ -34,16 +24,6 @@ getSource()</string>
   </void> 
   <void method="addNode"> 
    <object id="ClassNode0" class="com.horstmann.violet.ClassNode"> 
-    <void property="bounds"> 
-     <object class="java.awt.geom.Rectangle2D$Double"> 
-      <void method="setRect"> 
-       <double>610.0</double> 
-       <double>220.0</double> 
-       <double>120.0</double> 
-       <double>120.0</double> 
-      </void> 
-     </object> 
-    </void> 
     <void property="attributes"> 
      <void property="text"> 
       <string>Source
@@ -66,23 +46,13 @@ parseContent()</string>
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>610.0</double> 
-     <double>220.0</double> 
+     <double>656.0</double> 
+     <double>222.0</double> 
     </void> 
    </object> 
   </void> 
   <void method="addNode"> 
    <object id="ClassNode1" class="com.horstmann.violet.ClassNode"> 
-    <void property="bounds"> 
-     <object class="java.awt.geom.Rectangle2D$Double"> 
-      <void method="setRect"> 
-       <double>330.0</double> 
-       <double>230.0</double> 
-       <double>120.0</double> 
-       <double>120.0</double> 
-      </void> 
-     </object> 
-    </void> 
     <void property="attributes"> 
      <void property="text"> 
       <string>Source
@@ -105,23 +75,13 @@ parseContent()</string>
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>330.0</double> 
-     <double>230.0</double> 
+     <double>363.0</double> 
+     <double>191.0</double> 
     </void> 
    </object> 
   </void> 
   <void method="addNode"> 
    <object id="ClassNode2" class="com.horstmann.violet.ClassNode"> 
-    <void property="bounds"> 
-     <object class="java.awt.geom.Rectangle2D$Double"> 
-      <void method="setRect"> 
-       <double>140.0</double> 
-       <double>220.0</double> 
-       <double>140.0</double> 
-       <double>120.0</double> 
-      </void> 
-     </object> 
-    </void> 
     <void property="attributes"> 
      <void property="text"> 
       <string>Source
@@ -144,23 +104,13 @@ parseContent()</string>
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>140.0</double> 
-     <double>220.0</double> 
+     <double>857.0</double> 
+     <double>92.0</double> 
     </void> 
    </object> 
   </void> 
   <void method="addNode"> 
    <object id="ClassNode3" class="com.horstmann.violet.ClassNode"> 
-    <void property="bounds"> 
-     <object class="java.awt.geom.Rectangle2D$Double"> 
-      <void method="setRect"> 
-       <double>810.0</double> 
-       <double>60.0</double> 
-       <double>200.0</double> 
-       <double>220.0</double> 
-      </void> 
-     </object> 
-    </void> 
     <void property="attributes"> 
      <void property="text"> 
       <string>Title
@@ -191,23 +141,13 @@ Comparator for each attribute</string>
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>810.0</double> 
-     <double>60.0</double> 
+     <double>15.0</double> 
+     <double>138.0</double> 
     </void> 
    </object> 
   </void> 
   <void method="addNode"> 
    <object id="ClassNode4" class="com.horstmann.violet.ClassNode"> 
-    <void property="bounds"> 
-     <object class="java.awt.geom.Rectangle2D$Double"> 
-      <void method="setRect"> 
-       <double>780.0</double> 
-       <double>440.0</double> 
-       <double>120.0</double> 
-       <double>100.0</double> 
-      </void> 
-     </object> 
-    </void> 
     <void property="attributes"> 
      <void property="text"> 
       <string>Query
@@ -235,16 +175,6 @@ Retriever</string>
   </void> 
   <void method="addNode"> 
    <object id="ClassNode5" class="com.horstmann.violet.ClassNode"> 
-    <void property="bounds"> 
-     <object class="java.awt.geom.Rectangle2D$Double"> 
-      <void method="setRect"> 
-       <double>130.0</double> 
-       <double>460.0</double> 
-       <double>100.0</double> 
-       <double>60.0</double> 
-      </void> 
-     </object> 
-    </void> 
     <void property="name"> 
      <void property="text"> 
       <string>Main</string> 
@@ -260,16 +190,6 @@ Retriever</string>
   </void> 
   <void method="addNode"> 
    <object id="ClassNode6" class="com.horstmann.violet.ClassNode"> 
-    <void property="bounds"> 
-     <object class="java.awt.geom.Rectangle2D$Double"> 
-      <void method="setRect"> 
-       <double>470.0</double> 
-       <double>390.0</double> 
-       <double>100.0</double> 
-       <double>60.0</double> 
-      </void> 
-     </object> 
-    </void> 
     <void property="name"> 
      <void property="text"> 
       <string>iSongGUI</string> 
@@ -278,8 +198,32 @@ Retriever</string>
    </object> 
    <object class="java.awt.geom.Point2D$Double"> 
     <void method="setLocation"> 
-     <double>470.0</double> 
-     <double>390.0</double> 
+     <double>480.0</double> 
+     <double>339.0</double> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="addNode"> 
+   <object id="ClassNode7" class="com.horstmann.violet.ClassNode"> 
+    <void property="methods"> 
+     <void property="text"> 
+      <string>getColumnCount()
+getRowCount()
+getColumnName()
+getValueAt()
+setValueAt()</string> 
+     </void> 
+    </void> 
+    <void property="name"> 
+     <void property="text"> 
+      <string>SongTableModel</string> 
+     </void> 
+    </void> 
+   </object> 
+   <object class="java.awt.geom.Point2D$Double"> 
+    <void method="setLocation"> 
+     <double>469.0</double> 
+     <double>469.0</double> 
     </void> 
    </object> 
   </void> 
@@ -375,6 +319,30 @@ Retriever</string>
    </object> 
    <object idref="ClassNode6"/> 
    <object idref="ClassNode4"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
+    <void property="endArrowHead"> 
+     <object class="com.horstmann.violet.ArrowHead" field="V"/> 
+    </void> 
+    <void property="lineStyle"> 
+     <object class="com.horstmann.violet.LineStyle" field="DOTTED"/> 
+    </void> 
+   </object> 
+   <object idref="ClassNode6"/> 
+   <object idref="ClassNode7"/> 
+  </void> 
+  <void method="connect"> 
+   <object class="com.horstmann.violet.ClassRelationshipEdge"> 
+    <void property="endArrowHead"> 
+     <object class="com.horstmann.violet.ArrowHead" field="V"/> 
+    </void> 
+    <void property="lineStyle"> 
+     <object class="com.horstmann.violet.LineStyle" field="DOTTED"/> 
+    </void> 
+   </object> 
+   <object idref="ClassNode7"/> 
+   <object idref="ClassNode3"/> 
   </void> 
  </object> 
 </java> 

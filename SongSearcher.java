@@ -6,11 +6,11 @@ import java.util.ArrayList;
  *
  */
 public class SongSearcher {
-	
+
 	private String query;
 	private ArrayList<Song> results;
 	private ArrayList<String> retrievers; 
-	
+
 	/**
 	 * Constructor
 	 * @param query
@@ -18,9 +18,9 @@ public class SongSearcher {
 	public SongSearcher(String query, ArrayList<String> inRetrievers) {
 		this.query = query;
 		results = new ArrayList<Song>();
-		ArrayList<String>retrievers = inRetrievers;
+		retrievers = inRetrievers;
 	}
-	
+
 	/**
 	 * Method to search and return the list of results
 	 * @return
@@ -34,5 +34,5 @@ public class SongSearcher {
 		return results;
 	}
 
-	
+
 }

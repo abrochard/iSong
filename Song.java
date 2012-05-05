@@ -16,7 +16,7 @@ public class Song {
 	private int bpm; //Beat Per Minute
 	private String source; //the website's URL where the song can be found
 	private String retriever; //the retriever or service that found the song
-	
+
 	/**
 	 * Default constructor
 	 */
@@ -29,7 +29,7 @@ public class Song {
 		this.size = 0;
 		this.source = null;
 	}
-	
+
 	/**
 	 * Alternate constructor
 	 * @param title
@@ -117,7 +117,7 @@ public class Song {
 	public void setSource(String source) {
 		this.source = source;
 	}
-	
+
 	public String getRetriever() {
 		return retriever;
 	}
@@ -126,108 +126,4 @@ public class Song {
 		this.retriever = retriever;
 	}
 
-	/**
-	 * Returns String of song's information
-	 */
-	@Override
-	public String toString() {
-		return "Song [title=" + title + ", artist=" + artist + ", album="
-				+ album + ", bitrate=" + bitrate + ", duration=" + duration
-				+ ", size=" + size + ", bpm=" + bpm + ", source=" + source
-				+ ", retriever=" + retriever + "]";
-	}
-
-	/**
-	 * Compares songs by Bitrate
-	 * @return song comparator
-	 */	public static Comparator<Song> comparatorByBitrate(){
-		return new 
-				Comparator<Song>(){
-					public int compare(Song song1, Song song2){
-						Integer bit1 = (Integer)song1.getBitrate();
-						Integer bit2 = (Integer)song2.getBitrate();
-						return bit1.compareTo(bit2);
-						}
-				};
-	}
-	
-	/**
-	 * Compares songs by Duration
-	 * @return song comparator
-	 */
-	public static Comparator<Song> comparatorByDuration(){
-		return new 
-				Comparator<Song>(){
-					public int compare(Song song1, Song song2){
-						Integer dur1 = (Integer)song1.getDuration();
-						Integer dur2 = (Integer)song2.getDuration();
-						return dur1.compareTo(dur2);
-						}
-				};
-	}
-	
-	public static Comparator<Song> comparatorBySize(){
-		return new 
-				Comparator<Song>(){
-					public int compare(Song song1, Song song2){
-						Double size1 = (Double)song1.getSize();
-						Double size2 = (Double)song2.getSize();
-						return size1.compareTo(size2);
-						}
-				};
-	}
-	
-	/**
-	 * Compares songs by BPM
-	 * @return song comparator
-	 */
-	public static Comparator<Song> comparatorByBPM(){
-		return new 
-				Comparator<Song>(){
-					public int compare(Song song1, Song song2){
-						Integer BPM1 = (Integer)song1.getBPM();
-						Integer BPM2 = (Integer)song2.getBPM();
-						return BPM1.compareTo(BPM2);
-						}
-				};
-	}
-	
-	/**
-	 * Compares songs by Title
-	 * @return song comparator
-	 */
-	public static Comparator<Song> comparatorByTitle(){
-		return new 
-				Comparator<Song>(){
-					public int compare(Song song1, Song song2){
-						return song1.getTitle().compareTo(song2.getTitle());
-					}
-				};
-	} 
-	
-	/**
-	 * Compares songs by Artist
-	 * @return song comparator
-	 */
-	public static Comparator<Song> comparatorByArtist(){
-		return new 
-				Comparator<Song>(){
-					public int compare(Song song1, Song song2){
-						return song1.getArtist().compareTo(song2.getArtist());
-					}
-				};
-	}
-	
-	/**
-	 * Compares songs by Album
-	 * @return song comparator
-	 */
-	public static Comparator<Song> comparatorByAlbum(){
-		return new 
-				Comparator<Song>(){
-					public int compare(Song song1, Song song2){
-						return song1.getAlbum().compareTo(song2.getAlbum());
-					}
-				};
-	}
 }
