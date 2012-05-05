@@ -2,7 +2,11 @@ import java.util.ArrayList;
 
 import javax.swing.table.AbstractTableModel;
 
-
+/**
+ * The table model that forms the template for the song table
+ * @author samaratrilling
+ *
+ */
 public class SongTableModel extends AbstractTableModel{
 	
 	private Object[][] data;
@@ -29,14 +33,23 @@ public class SongTableModel extends AbstractTableModel{
 		}
 	}
 	
+	/**
+	 * Returns number of columns
+	 */
 	public int getColumnCount(){
 		return 9;
 	}
 	
+	/**
+	 * Returns number of rows
+	 */
 	public int getRowCount(){
 		return data.length;
 	}
 	
+	/**
+	 * Returns the column name
+	 */
 	public String getColumnName(int columnIndex){
 		switch (columnIndex) {
 		case 0: return "#";
@@ -44,18 +57,26 @@ public class SongTableModel extends AbstractTableModel{
 		case 2: return "Artist";
 		case 3: return "Album";
 		case 4: return "Bitrate";
-		case 5: return "Time (sec)";
+		case 5: return "Time";
 		case 6: return "Size";
 		case 7: return "BPM";
 		case 8: return "Source";
 		}
 		return "error getColumnName";
 	}
-
+	
+	/**
+	 * returns the object at the specified row and col
+	 * in the 2-D array list
+	 */
 	public Object getValueAt(int row, int col) {
 		return data[row][col];
 	}
 	
+	/**
+	 * Allows new user search results to be displayed
+	 * by changing the contents of the displayed array
+	 */
 	public void setValueAt(Object value, int row, int col){
 			Song newSong = (Song) value;
 			

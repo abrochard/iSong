@@ -26,15 +26,26 @@ import javax.swing.table.TableRowSorter;
  */
 public class iSongGUI {
 
+	/**
+	 * Instance variables for the songs
+	 */
 	String query;
 	ArrayList<String> retrievers;
 	ArrayList<String> initRetrievers;
 	SongSearcher engine;
 	ArrayList<Song> songs;
 	
+	/**
+	 * Instance variables for creating
+	 * the main window
+	 */
 	JFrame window;
 	JPanel mainPanel;
 
+	/**
+	 * Instance variables for the searcher
+	 * panel
+	 */
 	JPanel searcher;
 	JLabel sites;
 	JCheckBox retriever1;
@@ -44,13 +55,21 @@ public class iSongGUI {
 	JButton search;
 	JLabel info;
 	
-	
+	/**
+	 * Instance variables for the results panel
+	 */
 	JScrollPane results;
 	TableModel songModel;
 	JTable data;
 	ListSelectionModel listSelectionModel;
 	
-	
+	/**
+	 * Constructor for the GUI
+	 * @throws IllegalAccessException
+	 * @throws InstantiationException
+	 * @throws ClassNotFoundException
+	 * @throws MalformedURLException
+	 */
 	public iSongGUI() throws IllegalAccessException, InstantiationException, ClassNotFoundException, MalformedURLException{
 		 
 		window = new JFrame("iSong");
@@ -70,6 +89,14 @@ public class iSongGUI {
 	
 	}
 	
+	/**
+	 * Creates all the components for the searcher panel
+	 * @return the searcher panel to the split pane creator
+	 * @throws IllegalAccessException
+	 * @throws ClassNotFoundException
+	 * @throws InstantiationException
+	 * @throws MalformedURLException
+	 */
 	public JPanel getSearcherPanel() throws IllegalAccessException, ClassNotFoundException, InstantiationException, MalformedURLException{
 		searcher = new JPanel();
 		searcher.setLayout(new BoxLayout(searcher, BoxLayout.PAGE_AXIS));
@@ -98,6 +125,15 @@ public class iSongGUI {
 		
 	}
 	
+	/**
+	 * Creates all the components for the results panel,
+	 * including the table, and calls all methods needed
+	 * to get the song data and display it
+	 * @return the results panel to the split pane creator
+	 * @throws ClassNotFoundException
+	 * @throws InstantiationException
+	 * @throws IllegalAccessException
+	 */
 	public JScrollPane getResultsPanel() throws ClassNotFoundException, InstantiationException, IllegalAccessException{
 		retrievers = new ArrayList<String>();
 		
@@ -133,6 +169,10 @@ public class iSongGUI {
 		return results;	
 	}
 	
+	/**
+	 * Adds all the listeners to the checkboxes,
+	 * buttons and search bar in the searcher panel
+	 */
 	public void addSearcherListeners(){
 		retriever1.setMnemonic(KeyEvent.VK_1);
 		retriever1.setSelected(false);
@@ -213,24 +253,39 @@ public class iSongGUI {
 		});
 	}
 	
+	/**
+	 * Compares two doubles (for the table)
+	 */
 	public Comparator<Double> doubleComp = new Comparator<Double>(){
 		public int compare(Double d1, Double d2){
 			return d1.compareTo(d2);
 		}
 	};
 	
+	/**
+	 * Compares two ints (for the table)
+	 */
 	public Comparator<Integer> intComp = new Comparator<Integer>(){
 		public int compare(Integer i1, Integer i2){
 			return i1.compareTo(i2);
 		}
 	};
 
+	/**
+	 * Compares two Strings (for the table)
+	 */
 	public Comparator<String> stringComp = new Comparator<String>(){
 		public int compare(String s1, String s2){
 			return s1.compareTo(s2);
 		}
 	};
 	
+	/**
+	 * Inner class for the listener to open the song link in
+	 * a new window
+	 * @author samaratrilling
+	 *
+	 */
 	private class RowListener implements ListSelectionListener {
         public void valueChanged(ListSelectionEvent event) {
             if (data.getSelectedRow() == -1) {

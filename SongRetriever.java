@@ -19,7 +19,7 @@ public interface SongRetriever {
 	ArrayList<Song> getResults(String query, ArrayList<Song> results);
 
 	/**
-	 * This method just return the website's URL from which the song are searched
+	 * This method returns the website's URL from which the song are searched
 	 * @return
 	 */
 	String getSource();
